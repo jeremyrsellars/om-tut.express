@@ -124,9 +124,11 @@
 (defmethod entry-view :professor
   [person owner] (professor-view person owner))
 
-(om/root registry-view app-state
-  {:target (. js/document (getElementById "registry"))})
 
-(om/root classes-view app-state
-  {:target (. js/document (getElementById "classes"))})
+(defn root-reg []
+  (om/root registry-view app-state
+    {:target (. js/document (getElementById "registry"))}))
 
+(defn root-classes []
+  (om/root classes-view app-state
+    {:target (. js/document (getElementById "classes"))}))

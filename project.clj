@@ -15,7 +15,7 @@
     :builds [{:id "om-tut"
               :source-paths ["src"]
               :compiler {
-                :output-to "om_tut.js"
+                :output-to "out/om_tut.js"
                 :output-dir "out"
-                :optimizations :none
-                :source-map true}}]})
+                :optimizations :simple
+                :source-map "out/om_tut.map"}}]})
